@@ -1,0 +1,164 @@
+<!-www.htmlpoint.com->
+<cabeza>
+    <título>
+        Apestar
+    </título>
+</cabeza>
+<body  bgcolor = "#FFFFFF">
+    <script  language = "JavaScript">
+        <! -   para ocultar el contenido del script de los navegadores antiguos
+// rev 0.04
+var crlf =  " \ r \ n " ;  
+// debe determinar a partir del tipo de navegador
+    var x =  1 ;
+    var y =  1 ;
+    var dx =  1 ;
+    var dy =  1 ;
+    var s =  " " ;
+    var u =  0 ;
+    var oops_flag =  falso ;
+    puntuación var =  0 ;
+función  move1 () {
+    x + = dx;
+    si (x >  31 ) {
+    x - =  2  *  Matemáticas . abs (dx);
+    si (dx >  0 ) dx =  - dx; }
+    si (x <   0 ) {
+    x + =  2  *  Matemáticas . abs (dx);
+    if (dx <  0 ) dx =  - dx; }
+    y + = dy;
+    si (y >  14 ) {
+    y - =  2  *  Matemáticas . abs (dy);
+    if (dy >  0 ) dy =  - dy;
+    if ( Matemáticas . abs (x -  2 * u -  1 ) >  2 ) {
+    oops_flag =  true ;
+    }
+    else {
+    puntuación + =  1 ;       
+    }    
+    }
+    if (y <   0 ) {y + =  2  *  Matemáticas . abs (dy);
+if (dy <  0 ) dy =  - dy; }
+  }
+función  display1 () {
+    var s1 =  " "
+    var i, j;
+    if (oops_flag) return  " ¡Ups! ¡Has estropeado el juego más fácil jamás creado! ¡¡¡Lo siento por ti !! ¡¡Necesitas mucha práctica !! ¡¡¡Vuelve a menudo y juega !!!!!! " ;
+    para (j = 0 ; j < 15 ; j ++ ) {
+      para (i = 0 ; i < 32 ; i ++ ) {
+    if (j == y && i == x) s1 + =  " o " ;
+        else s1 + =  " . " ;
+      }
+      s1 + = crlf;
+    }
+    var s2 =  " "
+    para (i = 0 ; i < 16 ; i ++ ) {
+       if (u == i) s2 + =  " == " ;
+       de lo contrario s2 + =  " .. " ;
+    }
+    retorno (s1 + s2)
+  }
+  var timerID =  nulo ;
+  var timerRunning =  falso ;
+  var myform;
+función  stopclock () {
+        if (timerRunning) clearTimeout (timerID);
+        timerRunning =  falso ;
+  }
+función de  inicio ( formulario ) {
+        myform = forma;
+    oops_flag =  falso ;
+    if ( navegador . userAgent . indexOf ( " Mac " ) >  2 ) crlf =  " \ n " ;
+    // Asegúrate de que el reloj esté parado
+        reloj de parada ();
+        dotime ();
+  }
+función  dotime () {
+    move1 ();
+        if (myform ! =  null ) {
+      myform . texto3 . valor  =  display1 ();    
+      myform . la puntuación . valor  =  "  "  + puntuación;
+    }
+    if ( ! oops_flag) timerID =  setTimeout ( " dotime () " , 200 );
+        timerRunning =  true ;
+  }
+// finaliza el ocultamiento de contenidos de navegadores antiguos ->
+    </script>
+    <centro>
+        <font  size = "+1">
+            Apestar
+        </font>
+    </centro>
+    <centro>
+        Presione Inicio para correr. Mueve el mouse directamente sobre los guiones debajo del área de texto para
+mover la "paleta".
+        <hr>
+            <form  name = "myForm">
+                TEXTAREA NAME = "text3" ROWS = 16 COLS = 34 WRAP>
+[campo de juego]
+/ TEXTAREA>
+Puntuación:
+                <input  name = "score"  size = "10"  type = "text"  value = "0">
+                    <p>
+                        <Un  href = " "  onmouseover = " u = 0 " >
+                            \\\
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 1 " >
+                            ///
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 2 " >
+                            \\\
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 3 " >
+                            ///
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 4 " >
+                            \\\
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 5 " >
+                            ///
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 6 " >
+                            \\\
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 7 " >
+                            ///
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 8 " >
+                            \\\
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 9 " >
+                            ///
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 10 " >
+                            \\\
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 11 " >
+                            ///
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 12 " >
+                            \\\
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 13 " >
+                            ///
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 14 " >
+                            \\\
+                        </a>
+                        <Un  href = " "  onmouseover = " u = 15 " >
+                            ///
+                        </a>
+                        .... mueve el cursor aquí
+                        <Br>
+                            <Br>
+                                <input  name = " Button1 "  onclick = " startclock (this.form) "  type = " button "  value = " [Start Game] " >
+                                </input>
+                            </br>
+                        </br>
+                    </p>
+                </input>
+            </form>
+        </hr>
+    </centro>
+    <! - www. htmlpoint. com ->
+</cuerpo>

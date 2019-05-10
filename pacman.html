@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <cabeza>
+        <meta  charset = "utf-8"/>
+        <título>
+            HTML5 Pacman
+        </título>
+        <meta  contenido = " ancho = ancho del dispositivo, escalable por el usuario = no, escala inicial = 1.0, escala máxima = 1.0, escala mínima = 1.0 "  nombre = " ventana gráfica " >
+            <link  href = " css / bootstrap.min.css "  rel = "hoja de estilo">
+                <link  href = " css / Personalizacion / Mi Estilo.css "  rel = "hoja de estilo">
+                    <link  href = " css / bootstrap-social.css "  rel = " hoja de estilo">
+                        <link  href = " https://use.fontawesome.com/38f344ad72.css "  rel = "hoja de estilo">
+                        </link>
+                    </link>
+                </link>
+            </link>
+        </meta>
+        <! - <script src = "js / jquery.js">
+            </div>
+        </script>
+        <script src = "js / bootstrap.min.js">
+        </script> ->
+        <style  type = "text / css">
+            @font-face {
+      Familia de fuentes: ' BDCartoonShoutRegular ' ;
+        src : url ( ' BD_Cartoon_Shout-webfont.ttf ' ) formato ( ' truetype ' );
+      fuente-peso : normal ;
+      estilo de letra : normal ;
+      }
+      #pacman {
+        altura : 450 px ;
+        ancho : 342 px ;
+        margen : 20 px  auto ;
+      }
+      #shim {
+        Familia de fuentes : BDCartoonShoutRegular;
+        posición : absoluta ;
+        visibilidad : oculta
+      }
+      h1 { font-family : BDCartoonShoutRegular; text-align : center ; }
+      / * cuerpo {ancho: 342px; margen: 0px auto; Familia tipográfica: sans-serif; } * /
+      a {texto-decoración : ninguno ;}
+        </estilo>
+    </cabeza>
+    <cuerpo>
+        <div  id = "shim">
+            calza para fuente
+        </div>
+        <div  class = "pacman jumbotron">
+            < div  align = " center "  class = "container">
+                <h1>
+                    Juegue Pacman !!!!
+                </h1>
+                <Br>
+                    <p>
+                        <h2>
+                            Un solo juego, solo un poco, solo la letra "N" y luego las flechas para un hombre y un punto.
+                            !!! Importante !!! No de se deje coger de los fantasmas, porque pierde vidas.
+                            Solo tiene 3 vidas por juego
+                        </h2>
+                    </p>
+                    < Una  clase = " btn btn-primaria BTN-MD "  href = " index.html "  función = " botón " >
+                        << Inicio OVI
+                    </a>
+                    <Una  clase = " btn btn-primaria BTN-MD "  href = " Autores.html "  función = " botón " >
+                        Autores>>
+                    </a>
+                </br>
+            </div>
+        </div>
+        < div  id = "pacman">
+        </div>
+        <script  src = "js / pacman.js">
+        </script >
+        <script  src = "js / modernizr-1.5.min.js">
+        </script>
+        <script>
+            var el =  documento . getElementById ( " pacman " );
+    if ( Modernizr . canvas  &&  Modernizr . localstorage  && 
+        Modernizr . audio  && ( Modernizr . audio . ogg  ||  Modernizr . audio . mp3 )) {
+      ventana . setTimeout ( function () { PACMAN . init (el, " ./ " );}, 0 );
+    } else {
+      EL . innerHTML  =  " Lo siento, necesita un navegador decente <br /> <small> "  + 
+        " (firefox 3.6+, Chrome 4+, Opera 10+ y Safari 4+) </small> " ;
+    }
+        </script>
+    </cuerpo>
+</html>

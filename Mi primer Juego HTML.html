@@ -1,0 +1,193 @@
+<!DOCTYPE doctype html>
+<html  lang = "en">
+    <cabeza>
+        <estilo>
+            cuerpo{
+        color de fondo :#454545
+}
+        </estilo>
+        <meta  charset = "utf-8">
+            <título>
+                Mi Primer Juego HTML
+                <link  href = "../css/fileinput.css"  media ="all"  rel = "stylesheet"  type ="text/css"/>
+                <link  href = "http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css "  rel = "hoja de estilo">
+                    <script  src ="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+                    </script>
+                    <script src ="../js/fileinput.min.js"  type ="text/javascript">
+                    </script>
+                </link>
+            </título>
+            <meta  contenido = "ancho=ancho del dispositivo, escalable por el usuario = no, escala inicial = 1.0, escala máxima = 1.0, escala mínima = 1.0 "  nombre = "ventana gráfica">
+                <link  href= "css/bootstrap.min.css "  rel = "hoja de estilo">
+                    <link  href = "css/Personalizacion/Mi Estilo.css" rel = "hoja de estilo">
+                        <link  href = "css/bootstrap-social.CSS" rel ="hoja de estilo">
+                        </link>
+                    </link>
+                </link>
+            </meta>
+        </meta>
+        <estilo>
+            .cuadrito {ancho : 60 px ; altura : 60 px ; borde : sólido  4 px ; flotar : izquierda ; tamaño de letra : 25 px ; text-align : center ;}
+        #div_contenedor {ancho : 204 px ; borde : sólido  0 px ; margen : auto ;}
+        li {font-size : 28 px ; ancho : 850 px ; margen inferior : 20 px;
+        </estilo>
+        <script>
+            var turno =  " X " ;    
+        var turno2 =  " O " ;
+        var bandera = 1 ;
+        var ban = falso ;
+        var opciones =  new  Array ( 9 ); // arreglo para las pociones del gato
+        función  marcar ( id ) {        
+            // Para los turnos
+            var celda =  documento . getElementById (id);
+            if (bandera % 2 ! = 0  && opciones [id] ! = 0 ) {
+                Celda . valor  = turno;
+                documento . getElementById ( " div_turno " ). innerHTML = " Turno del jugador: " + turno2; Celda . estilo . background = " lightblue " ;
+                opciones [id] = 1 ;
+            } else  if (bandera % 2 == 0  && opciones [id] ! = 1 ) {
+                Celda . valor = turno2;
+                documento . getElementById ( " div_turno " ). innerHTML = " Turno del jugador: " + turno; Celda . estilo . background = " lightgreen " ;
+                opciones [id] = 0 ;
+            }
+            bandera ++ ;
+            jugadorX ();
+            jugadorO ();
+        }   
+ 
+        función  jugadorX () {
+                // para el jugador X
+                if (opciones [ 1 ] == 1  && opciones [ 2 ] == 1  && opciones [ 3 ] == 1 ) { // cebador linea horizontal
+                    alerta ( " Felicidades Jugador "  + turno +  " Ganaste " );
+                } else  if (opciones [ 4 ] == 1  && opciones [ 5 ] == 1  && opciones [ 6 ] == 1 ) { // segunda linea horizontal
+                    alerta ( " Felicidades Jugador "  + turno +  " Ganaste " );
+                } else  if (opciones [ 7 ] == 1  && opciones [ 8 ] == 1  && opciones [ 9 ] == 1 ) { // tercera linea horizontal
+                    alerta ( " Felicidades Jugador "  + turno +  " Ganaste " );
+                } else  if (opciones [ 1 ] == 1  && opciones [ 5 ] == 1  && opciones [ 9 ] == 1 ) { // primera linea diagonal
+                    alerta ( " Felicidades Jugador "  + turno +  " Ganaste " );
+                } else  if (opciones [ 3 ] == 1  && opciones [ 5 ] == 1  && opciones [ 7 ] == 1 ) { // segunda linea diagonal
+                    alerta ( " Felicidades Jugador "  + turno +  " Ganaste " );
+                } else  if (opciones [ 1 ] == 1  && opciones [ 4 ] == 1  && opciones [ 7 ] == 1 ) { // cebador linea vertical izquierda
+                    alerta ( " Felicidades Jugador "  + turno +  " Ganaste " );
+                } else  if (opciones [ 2 ] == 1  && opciones [ 5 ] == 1  && opciones [ 8 ] == 1 ) { // linea de enmedio vertical
+                    alerta ( " Felicidades Jugador "  + turno +  " Ganaste " );
+                } else  if (opciones [ 3 ] == 1  && opciones [ 6 ] == 1  && opciones [ 9 ] == 1 ) { // tercer linea vertical derecha
+                    alerta ( " Felicidades Jugador "  + turno +  " Ganaste " );
+                }
+                }
+                // para el jugador 2
+               función  jugadorO () {
+                if (opciones [ 1 ] == 0  && opciones [ 2 ] == 0  && opciones [ 3 ] == 0 ) { // cebador linea horizontal
+                    alerta ( " Felicidades Jugador "  + turno2 +  " Ganaste " );
+                } else  if (opciones [ 4 ] == 0  && opciones [ 5 ] == 0  && opciones [ 6 ] == 0 ) { // segunda linea horizontal
+                    alerta ( " Felicidades Jugador "  + turno2 +  " Ganaste " );
+                } else  if (opciones [ 7 ] == 0  && opciones [ 8 ] == 0  && opciones [ 9 ] == 0 ) { // tercera linea horizontal
+                    alerta ( " Felicidades Jugador "  + turno2 +  " Ganaste " );
+                } else  if (opciones [ 1 ] == 0  && opciones [ 5 ] == 0  && opciones [ 9 ] == 0 ) { // primera linea diagonal
+                    alerta ( " Felicidades Jugador "  + turno2 +  " Ganaste " );
+                } else  if (opciones [ 3 ] == 0  && opciones [ 5 ] == 0  && opciones [ 7 ] == 0 ) { // segunda linea diagonal
+                    alerta ( " Felicidades Jugador "  + turno2 +  " Ganaste " );
+                } else  if (opciones [ 1 ] == 0  && opciones [ 4 ] == 0  && opciones [ 7 ] == 0 ) { // cebador linea vertical izquierda
+                    alerta ( " Felicidades Jugador "  + turno2 +  " Ganaste " );
+                } else  if (opciones [ 2 ] == 0  && opciones [ 5 ] == 0  && opciones [ 8 ] == 0 ) { // linea de enmedio vertical
+                    alerta ( " Felicidades Jugador "  + turno2 +  " Ganaste " );
+                } else  if (opciones [ 3 ] == 0  && opciones [ 6 ] == 0  && opciones [ 9 ] == 0 ) { // tercer linea vertical derecha
+                    alerta ( " Felicidades Jugador "  + turno2 +  " Ganaste " );
+                }
+               }
+                // funcion para reiniciar el juego
+               función  reiniciar () {
+                ubicación . recargar ();
+               }
+        </ script>
+    </cabeza>
+    <body  class = " rad2 " >
+        <div  class = " HTML5_Mm jumbotron " >
+            <div  class = " container " >
+                <h1>
+                    Mi Primer Juego HTML
+                </h1>
+                <Br>
+                    <p>
+                        Este es el juego de Triqui donde dos jugadores, X y O y despues de cada movimiento (click) de un jugador, se verifica con este movimiento se ha ganado la partida y se manda un mensaje de respuesta o se reinicia el juego.
+                    </p>
+                    <Br>
+                        < Una  clase = " btn btn-primaria BTN-MD "  href = " index.html "  función = " botón " >
+                            << Inicio OVI
+                        </ a >
+                        < Una  clase = " btn btn-primaria BTN-MD "  href = " juego Ahorcado.html "  función = " botón " >
+                            Juego del Ahorcado >>
+                        </ a >
+                    </ br >
+                </ br >
+            </ div >
+        </ div >
+        <! - Tablero ->
+        < div  id = " div_contenedor " >
+            < input  class = " cuadrito "  id = " 1 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                < input  class = " cuadrito "  id = " 2 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                    < input  class = " cuadrito "  id = " 3 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                        < input  class = " cuadrito "  id = " 4 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                            < input  class = " cuadrito "  id = " 5 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                                < input  class = " cuadrito "  id = " 6 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                                    < input  class = " cuadrito "  id = " 7 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                                        < input  class = " cuadrito "  id = " 8 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                                            < input  class = " cuadrito "  id = " 9 "  onclick = " marcar (this.id) "  readonly = " "  type = " text "  value = " " >
+                                                < div  id = " div_turno " >
+                                                    Turno del jugador: X
+                                                </ div >
+                                                < button  onclick = " reiniciar () " >
+                                                    Reiniciar juego
+                                                </ botón >
+                                            </ input >
+                                        </ input >
+                                    </ input >
+                                </ input >
+                            </ input >
+                        </ input >
+                    </ input >
+                </ input >
+            </ input >
+        </ div >
+        < div  class = " container " >
+            < ul  style = " font-size-adjust : 0.58  " >
+                < h2 >
+                    Instrucciones del juego:
+                </ h2 >
+                < li >
+                    < pequeño >
+                        1. Dos jugadores, X y O
+                    </ pequeño >
+                </ li >
+                < li >
+                    < pequeño >
+                        2. Despues de cada movimiento (click) de un jugador, se verifica si este movimiento se ha ganado la partida y se manda un mensaje de felicitación
+                    </ pequeño >
+                </ li >
+                < li >
+                    < pequeño >
+                        3. Si despues de un movimiento no se gana la partida, se cede el turno al otro jugador
+                    </ pequeño >
+                </ li >
+                < li >
+                    < pequeño >
+                        4. Actualizar en cada cambio de turno el mensaje en la parte inferior del tablero
+                    </ pequeño >
+                </ li >
+                < li >
+                    < pequeño >
+                        5. Solo se puede "marcar" una celda que NO ha sido previamente marcada.
+                    </ pequeño >
+                </ li >
+                < li >
+                    < pequeño >
+                        6.Cuando el tablero se ha completado sin identificar un ganador, se reinicia el juego
+                    </ pequeño >
+                </ li >
+            </ ul >
+        </ div >
+        < script  src = " js / jquery.js " >
+        </ script >
+        < script  src = " js / bootstrap.min.js " >
+        </ script >
+    </ cuerpo>
+</ html >

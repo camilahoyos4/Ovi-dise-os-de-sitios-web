@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html  lang = "en">
+    <cabeza>
+        <meta  charset = "utf-8">
+            <título>
+                Preguntas GIT / GITHUB
+            </título>
+            <meta  contenido = "ancho = ancho del dispositivo, escalable por el usuario = no, escala inicial = 1.0, escala máxima = 1.0, escala mínima = 1.0 "nombre ="ventana gráfica">
+                <link  href = "css / bootstrap.min.css "  rel = "hoja de estilo">
+                    <link  href = "css / Personalizacion / Mi Estilo.css "  rel = "hoja de estilo">
+                        <link  href = "css / bootstrap-social.css "  rel = "hoja de estilo">
+                            <link  href = "https://use.fontawesome.com/38f344ad72.css"  rel ="hoja de estilo">
+                            </link>
+                        </link>
+                    </link>
+                </link>
+            </meta>
+        </meta>
+        <tipo de script  = "texto / javascript">
+            var corr = [ ' a ' , ' b ' , ' c ' , ' d ' , ' c ' , ' d ' , ' c ' , ' b ' , ' c ' , ' b ' ];
+var niv ={ 2  :  ' Bajo ' , 5  :  ' Medio ' , 10  :  ' Avanzado ' }
+función  fnc () {
+var aciertos =  0 ;
+var radio_checked =  - 1 ;
+para ( var j =  0 , rad =  document . getElementsByTagName ( ' input ' ); j <  rad . length - 1 ; j ++ ) {
+si (rad [j]. marcado ) {
+radio_checked ++ ;
+if (rad [j]. value  == corr [radio_checked]) {
+documento . getElementById (rad [j]. parentNode . id ). estilo . backgroundColor  =  ' # 9BFFA0 ' ;
+aciertos ++ ;
+} else {
+documento . getElementById (rad [j]. parentNode . id ). estilo . backgroundColor  =  ' # FF8C8C ' ;
+}
+}
+}
+documento . getElementById ( ' nivel ' ). innerHTML  =  ' Nivel de Conocimiento: '  + niv [aciertos];
+}
+        </script>
+    </cabeza>
+    <cuerpo>
+        <div  class = "github_pre jumbotron">
+            <div  class ="container">
+                <h1>
+                    Preguntas Sobre GIT / GITHUB
+                </h1>
+                <Br>
+                    <p>
+                        Estas preguntas responden al tema de GIT / GITHUB, Respondelas y adquiere tu conocimiento sobre esta herramienta de la WEB.
+                    </p>
+                    <Una  clase = "btn btn-primaria BTN-MD"  href = "index.html"  función = "botón">
+                        << Inicio OVI
+                    </a>
+                    <Una  clase = "btn btn-primaria BTN-MD"  href = "Mi primer Juego Html.HTML"  función ="botón">
+                        Mi primer Juego HTML >>
+                    </a>
+                </br>
+            </div>
+        </div>
+        <div  class = "rad3 container">
+            <div>
+                <h3>
+                    Responda las siguientes preguntas para medir el conocimiento de GIT / GITHUB en Medio, Bajo o Avanzado.
+                </h3>
+                <Br>
+                    <Br>
+                        <formulario>
+                            <label  for = "p1"  id = "rad0"  style = "align-content : center">
+                                1.¿Elementos básicos de un sistema de versiones?
+                                <nombre de entrada  = "p1" tipo = "radio" valor = "a" />  
+                                una
+                                <nombre de entrada  = "p1" tipo = "radio" valor = "b" />  
+                                segundo
+                                <nombre de entrada  = "p1" tipo = "radio" valor = "c" />  
+                                do
+                                <nombre de entrada  = "p1" tipo = "radio" valor = "d" />  
+                                re
+                                <Br>
+                                    <p>
+                                        a.) ALMACENAMIENTO, HISTORIA DE DATOS, INFORMES
+                                    </p>
+                                    <Br>
+                                        <p>
+                                            b.) ALMACENAMIENTO, HISTORIA DE DATOS, SSH
+                                        </p>
+                                        <Br>
+                                            <p>
+                                                c.) HISTORIA DE DATOS, SSH, DB
+                                            </p>
+                                            <Br>
+                                                <p>
+                                                    d.) HISTORIA DE DATOS, SSH, NUBE
+                                                </p>
+                                            </br>
+                                        </br>
+                                    </br>
+                                </br>
+                            </label>
+                            <Br/>
+                            <label  for = "p2"  id = "rad1">
+                                2.¿Qué sistema operativo se construyo GIT?
+                                <nombre de entrada  = "p2" tipo = "radio" valor = "a" />  
+                                una
+                                <nombre de entrada  = "p2" tipo = "radio" valor = "b" />  
+                                segundo
+                                <nombre de entrada  = "p2" tipo = "radio" valor = "c" />  
+                                do
+                                <nombre de entrada  = "p2" tipo = "radio" valor = "d" />  
+                                re
+                                <Br>
+                                    <p 
+                                        a.) ganar
+                                    </p>
+                                    <Br>
+                                        <p>
+                                            b.) LINUX
+                                        </p>
+                                        <Br>
+                                            <p>
+                                                c.) SOLARIS
+                                            </p>
+                                            <Br>
+                                                <p>
+                                                    d.): MAC
+                                                </p>
+                                            </br>
+                                        </br>
+                                    </br>
+                                </br>
+                            </label>
+                            <Br>
+                                <label  for = "p3"  id = "rad2">
+                                    3.¿Estado de archivo para ser transferido al repositorio de la WEB?
+                                    <nombre de entrada  = "p3" tipo = "radio" valor = "a" />  
+                                    una
+                                    <nombre de entrada  = "p3" tipo = "radio" valor = "b" />  
+                                    segundo
+                                    <nombre de entrada  = "p3" tipo = "radio" valor = "c" />  
+                                    do
+                                    <nombre de entrada  = "p3" tipo = "radio" valor = "d" />  
+                                    re
+                                    <Br>
+                                        <p>
+                                            a.) MODIFICADO
+                                        </p>
+                                        <Br>
+                                            <p>
+                                                b.) ESCENADA
+                                            </p>
+                                            <Br>
+                                                <p>
+                                                    c.) COMPROMETIDOS
+                                                </p>
+                                                <Br>
+                                                    <p>
+                                                        d.) BORRAR
+                                                    </p>
+                                                </br>
+                                            </br>
+                                        </br>
+                                    </br>
+                                </label>
+                                <Br/>
+                                <label  for = "p4"  id = "rad3">
+                                    4.¿Estado de los archivos que no están guardados pero modificados?
+                                    <nombre de entrada  = "p4" tipo = "radio" valor = "a" />  
+                                    una
+                                    <nombre de entrada  = "p4" tipo = "radio" valor = "b" />  
+                                    segundo
+                                    <nombre de entrada  = "p4" tipo = "radio" valor = "c" />  
+                                    do
+                                    <nombre de entrada  = "p4" tipo = "radio" valor = "d" />  
+                                    re
+                                    <Br>
+                                        <p>
+                                            a.) SALVADO
+                                        </p>
+                                        <Br>
+                                            <p>
+                                                b.) ESCENADA
+                                            </p>
+                                            <Br>
+                                                <p>
+                                                    c.) COMPROMETIDOS
+                                                </p>
+                                                <Br>
+                                                    <p>
+                                                        d.) MODIFICADO
+                                                    </p>
+                                                </br>
+                                            </br>
+                                        </br>
+                                    </br>
+                                </label>
+                                <Br>
+                                    <label  for = "p5"  id = "rad4">
+                                        5.¿Estado de los archivos que se encuentran en un área intermedia?
+                                        <nombre de entrada  = "p5" tipo ="radio" valor = "a" />  
+                                        una
+                                        <nombre de entrada  = "p5" tipo = "radio" valor = "b" />  
+                                        segundo
+                                        <nombre de entrada  = "p5" tipo = "radio" valor = "c" />  
+                                        do
+                                        <nombre de entrada  = "p5" tipo = "radio" valor = "d" />  
+                                        r
+                                        <Br>
+                                            <p>
+                                                a.) MODIFICADO
+                                            </p>
+                                            <Br>
+                                                <p>
+                                                    b.) SALVADO
+                                                </p>
+                                                <Br>
+                                                    <p>
+                                                        c.) ESCENARIO
+                                                    </p>
+                                                    <Br>
+                                                        <p>
+                                                            d.) COMPROMETIDOS
+                                                        </p>
+                                                    </br>
+                                                </br>
+                                            </br>
+                                        </br>
+                                    </label>
+                                    <Br>
+                                        <label  for = "p6"  id = "rad5"  style = "align-content : center">
+                                            6.¿Repositorio GITHUB es una plataforma de tipo?
+                                            <nombre de entrada  = "p6 " tipo = "radio" valor = "a" />  
+                                            una
+                                            <nombre de entrada  = "p6 " tipo = "radio" valor = "b" />  
+                                            segundo
+                                            <nombre de entrada  = "p6 " tipo = "radio" valor = "c" />  
+                                            do
+                                            <nombre de entrada  = "p6 " tipo = "radio" valor = "d" />  
+                                            re
+                                            <Br>
+                                                <p>
+                                                    a.) BUSQUEDA
+                                                </p>
+                                                <Br>
+                                                    <p>
+                                                        b.) ALMACENAMIENTO
+                                                    </p>
+                                                    <Br>
+                                                        <p>
+                                                            c.) SEGURIDAD
+                                                        </p>
+                                                        <Br>
+                                                            <p>
+                                                                d.) DESARROLLO COLABORATIVO
+                                                            </p>
+                                                        </br>
+                                                    </br>
+                                                </br>
+                                            </br>
+                                        </label>
+                                        <Br/>
+                                        <label  for = "p7"  id = "rad6">
+                                            7.¿GITHUB su funcion principal es mantener?
+                                            <nombre de entrada  = "p7" tipo = "radio" valor = "a" />  
+                                            una
+                                            <nombre de entrada  = "p7" tipo = "radio" valor = "b" />  
+                                            segundo
+                                            <nombre de entrada  = "p7" tipo = "radio" valor = "c" />  
+                                            do
+                                            <nombre de entrada  = "p7" tipo = "radio" valor = "d" />  
+                                            re
+                                            <Br>
+                                                <p>
+                                                    a.) SEGURIDAD EN LOS DATOS
+                                                </p>
+                                                <Br>
+                                                    <p>
+                                                        b.) COPIAS DE RESPALDO
+                                                    </p>
+                                                    <Br>
+                                                        <p>
+                                                            c.) CONTROL DE VERSIONES
+                                                        </p>
+                                                        <Br>
+                                                            <p>
+                                                                d.) SINCRONIZACION DE DATOS
+                                                            </p>
+                                                        </br>
+                                                    </br>
+                                                </br>
+                                            </br>
+                                        </label>
+                                        <Br>
+                                            <label  for = "p8"  id = "rad7">
+                                                8.¿los codigos fuentes de proyectos se almacenan de forma?
+                                                <nombre de entrada  = "p8" tipo = "radio" valor = "a" />  
+                                                una
+                                                <nombre de entrada  = "p8" tipo = "radio" valor = "b" />  
+                                                segundo
+                                                <nombre de entrada  = "p8" tipo = "radio" valor = "c" />  
+                                                do
+                                                <nombre de entrada  = "p8" tipo = "radio" valor = "d" />  
+                                                re
+                                                <Br>
+                                                    <p>
+                                                        a.) PRIVADA Y CERRADA
+                                                    </p>
+                                                    <Br>
+                                                        <p>
+                                                            b.) PUBLICA Y PRIVADA
+                                                        </p>
+                                                        <Br>
+                                                            <p>
+                                                                c.) PUBLICA Y CUENTA DE PAGO
+                                                            </p>
+                                                            <Br>
+                                                                <p>
+                                                                    d.) CUENTA DE PAGO Y CERRADA
+                                                                </p>
+                                                            </br>
+                                                        </br>
+                                                    </br>
+                                                </br>
+                                            </label>
+                                            <Br/>
+                                            <label  for = "p9"  id = "rad8">
+                                                9. ¿Acción donde se multiplica un repositorio?
+                                                <nombre de entrada  = "p9" tipo = "radio" valor = "a" />  
+                                                una
+                                                <nombre de entrada  = "p9" tipo = "radio" valor = "b" />  
+                                                segundo
+                                                <nombre de entrada  = "p9" tipo = "radio" valor = "c" />  
+                                                do
+                                                <nombre de entrada  = "p9" tipo = "radio" valor = "d" />  
+                                                re
+                                                <Br>
+                                                    <p>
+                                                        a.) COPIAR
+                                                    </p>
+                                                    <Br>
+                                                        <p>
+                                                            b.) PEGAR
+                                                        </p>
+                                                        <Br>
+                                                            <p>
+                                                                c.) CLONAR
+                                                            </p>
+                                                            <Br>
+                                                                <p>
+                                                                    d.) DESCARGAR
+                                                                </p>
+                                                            </br>
+                                                        </br>
+                                                    </br>
+                                                </br>
+                                            </label>
+                                            <Br>
+                                                <label  for = "p10"  id = "rad9">
+                                                    10¿Es un repositorio donde se guarda un cambio despues del Commit?
+                                                    <nombre de entrada  = "p10 " tipo = "radio" valor = "a" />  
+                                                    una
+                                                    <nombre de entrada  = "p10 " tipo = "radio" valor = "b" />  
+                                                    segundo
+                                                    <nombre de entrada  = "p10 " tipo = "radio" valor = "c" />  
+                                                    do
+                                                    <nombre de entrada  = "p10 " tipo = "radio" valor = "d" />  
+                                                    re
+                                                    <Br>
+                                                        <p>
+                                                            un local
+                                                        </p>
+                                                        <Br>
+                                                            <p>
+                                                                b.) REMOTO
+                                                            </p>
+                                                            <Br>
+                                                                <p>
+                                                                    c.) DE BASE DE DATOS
+                                                                </p>
+                                                                <Br>
+                                                                    <p>
+                                                                        d.) DE SSH
+                                                                    </p>
+                                                                </br>
+                                                            </br>
+                                                        </br>
+                                                    </br>
+                                                </label>
+                                                <div  id = "nivel">
+                                                </div>
+                                                <input  onclick = "fnc ()"  type = "button"  value = "verificado" />
+                                                <Br/>
+                                            </br>
+                                        </br>
+                                    </br>
+                                </br>
+                            </br>
+                        </form>
+                    </br>
+                </br>
+            </div>
+        </div>
+        <script  src = "js / jquery.js ">
+            </div>
+        </ script>
+        <script  src = "js / bootstrap.min.js ">
+        </script>
+    </cuerpo>
+</html>
